@@ -7,7 +7,21 @@ test('dummy returns one', () => {
   expect(result).toBe(1)
 })
 
+describe('most likes', () => {
+  test('returns author with most likes', () => {
+    const result = listHelper.mostLikes(blogs)
+    expect(result.likes).toBe(5)
+    expect(result.name).toBe('Robert C. Martin')
+  })
+})
 
+describe('most blogs', () => {
+  test('resturns author with most blogs', () => {
+    const result = listHelper.mostBlogs(blogs)
+    expect(result.blogs).toBe(3)
+    expect(result.name).toBe('Edsger W. Dijkstra')
+  })
+})
 
 describe('total likes', () => {
   
