@@ -1,0 +1,26 @@
+.success {
+  color: green;
+  background: lavender;
+  font-size: 15px;
+  border-style: solid;
+  border-radius: 3px;
+  padding: 5px;
+  margin-bottom: 5px;
+}
+
+.error {
+  color: red;
+  background: lavender;
+  font-size: 15px;
+  border-style: solid;
+  border-radius: 3px;
+  padding: 5px;
+  margin-bottom: 5px;
+}
+
+.blog {
+  border-style: solid;
+  border-radius: 1px;
+  padding: 2px;
+  margin-bottom: 2px;
+}
