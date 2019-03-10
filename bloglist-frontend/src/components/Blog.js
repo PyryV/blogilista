@@ -1,20 +1,13 @@
-import React, { useState } from 'react'
+import React from 'react'
 import blogService from '../services/blogs'
 import PropTypes from 'prop-types'
+import {
+  // eslint-disable-next-line no-unused-vars
+  Route, Link, Redirect, withRouter
+} from 'react-router-dom'
 
 const Blog = ({ blog, blogs, setBlogs, setErrorMessage, user }) => {
-  const[showFull, setShowFull] = useState(false)
 
-  const showFullInfo = { display: showFull ? '' : 'none' }
-
-
-  const visibility = () => {
-    if(showFull) {
-      setShowFull(false)
-    } else {
-      setShowFull(true)
-    }
-  }
 
   const visibleuser = () => {
     if(blog.user !== undefined) {
@@ -79,10 +72,15 @@ const Blog = ({ blog, blogs, setBlogs, setErrorMessage, user }) => {
 
   }
 
+  if(blog === undefined) {
+    return null
+  }
+
   return (
-    <div className="blog" onClick={() => visibility()}>
-      {blog.title} {blog.author}
-      <div className="bloginfo" style={showFullInfo}>
+    <div className="blog">
+      <h2>{blog.title}</h2>
+      Kirjoittaja: {blog.author}
+      <div className="bloginfo">
         <p>{blog.url}</p>
         <p>
           Tykkäykset: {blog.likes}
@@ -91,6 +89,7 @@ const Blog = ({ blog, blogs, setBlogs, setErrorMessage, user }) => {
         {visibleuser()}
         {removeButton()}
       </div>
+
     </div>
   )
 }

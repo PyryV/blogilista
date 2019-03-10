@@ -7,13 +7,16 @@
     "prop-types": "^15.7.2",
     "react": "^16.8.2",
     "react-dom": "^16.8.2",
-    "react-scripts": "^2.1.5"
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "^2.1.8"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "cypress:open": "cypress open",
+    "lint": "eslint ."
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -26,6 +29,8 @@
     "not op_mini all"
   ],
   "devDependencies": {
+    "cypress": "^3.1.5",
+    "eslint": "^5.15.1",
     "eslint-plugin-jest": "^22.3.0",
     "jest-dom": "^3.1.2",
     "react-testing-library": "^6.0.0"

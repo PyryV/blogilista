@@ -28,7 +28,7 @@ const getAll = () => {
 
 const remove = (id) => {
   const config = {
-    headers: {Authorization: token}
+    headers: { Authorization: token }
   }
   return axios.delete(`${baseUrl}/${id}`, config)
 }
